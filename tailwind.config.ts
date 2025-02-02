@@ -1,3 +1,4 @@
+import { Roboto } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -8,9 +9,13 @@ export default {
   ],
   theme: {
     extend: {
+      fontWeight: {
+        bold: "700",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        beige: "#e3dcd5",
       },
     },
   },
