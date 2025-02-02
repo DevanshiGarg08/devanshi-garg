@@ -4,9 +4,6 @@ import { motion } from "framer-motion";
 import { DiJavascript1 } from "react-icons/di";
 import {
   FaReact,
-  FaNodeJs,
-  FaDatabase,
-  FaLock,
   FaMobile,
   FaPaintBrush,
   FaAndroid,
@@ -22,15 +19,11 @@ import {
 } from "react-icons/ri";
 import {
   SiAdobe,
-  SiWordpress,
   SiFigma,
-  SiMysql,
-  SiMongodb,
   SiAndroidstudio,
   SiTypescript,
   SiAdobephotoshop,
   SiAdobelightroom,
-  SiPostgresql,
   SiJira,
 } from "react-icons/si";
 
