@@ -1,4 +1,3 @@
-import { Roboto } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -16,6 +15,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         beige: "#e3dcd5",
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        birthstone: ["var(--font-birthstone)", "cursive"],
       },
     },
   },

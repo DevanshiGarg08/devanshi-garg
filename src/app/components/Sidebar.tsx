@@ -1,9 +1,30 @@
+import { BsBehance } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { RiInstagramFill } from "react-icons/ri";
+
 export default function Sidebar() {
   return (
-    <div className="hidden lg:flex flex-col fixed left-8 top-1/2 space-y-8 text-2xl">
+    <>
+      {/* Sidebar for Desktop */}
+      <div className="hidden md:flex flex-col fixed left-8 top-1/2 space-y-8 text-2xl">
+        <SocialLinks />
+      </div>
+
+      {/* Footer for Mobile */}
+      <div className="md:hidden flex justify-center w-full bg-black opacity-90 py-4">
+        <SocialLinks isFooter />
+      </div>
+    </>
+  );
+}
+
+function SocialLinks({ isFooter = false }: { isFooter?: boolean }) {
+  return (
+    <div
+      className={`flex ${
+        isFooter ? "space-x-8" : "flex-col space-y-8"
+      } text-2xl  ${isFooter ? "text-white" : "text-black"}`}
+    >
       <a
         href="https://github.com/DevanshiGarg08"
         target="_blank"
@@ -30,7 +51,7 @@ export default function Sidebar() {
         target="_blank"
         className="hover:opacity-80"
       >
-        <RiInstagramFill />
+        <BsBehance />
       </a>
     </div>
   );
