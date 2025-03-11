@@ -174,7 +174,7 @@ export default function Skills() {
       </div>
 
       {/* Sidebar as Footer on Mobile */}
-      <div className="md:hidden w-full bg-black">
+      <div className="md:hidden w-full ">
         <Sidebar />
       </div>
     </div>

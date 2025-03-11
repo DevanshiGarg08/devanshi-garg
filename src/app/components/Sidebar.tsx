@@ -11,7 +11,7 @@ export default function Sidebar() {
       </div>
 
       {/* Footer for Mobile */}
-      <div className="md:hidden flex justify-center w-full bg-black opacity-90 py-4">
+      <div className="md:hidden flex justify-center w-full opacity-90 py-4">
         <SocialLinks isFooter />
       </div>
     </>
@@ -22,8 +22,10 @@ function SocialLinks({ isFooter = false }: { isFooter?: boolean }) {
   return (
     <div
       className={`flex ${
-        isFooter ? "space-x-8" : "flex-col space-y-8"
-      } text-2xl  ${isFooter ? "text-white" : "text-black"}`}
+        isFooter
+          ? "flex-row justify-between items-center w-full px-16"
+          : "flex-col space-y-8"
+      } text-2xl  ${isFooter ? "text-black" : "text-black"}`}
     >
       <a
         href="https://github.com/DevanshiGarg08"
