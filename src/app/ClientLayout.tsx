@@ -1,18 +1,24 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Preloader from "./components/Preloader";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 export default function ClientLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [loading, setLoading] = useState(false); // Start with false to avoid SSR mismatch
-  const [isClient, setIsClient] = useState(false); // Track client-side rendering
+  const pathname = usePathname();
+  const isResumePDF = pathname === "/resume/pdf";
+
+  const [loading, setLoading] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); // Ensure client rendering
+    setIsClient(true);
     if (!sessionStorage.getItem("hasVisited")) {
       sessionStorage.setItem("hasVisited", "true");
       setLoading(true);
@@ -20,7 +26,16 @@ export default function ClientLayout({
     }
   }, []);
 
-  if (!isClient) return null; // Prevent hydration mismatch
+  if (!isClient) return null;
 
-  return <>{loading ? <Preloader setLoading={setLoading} /> : children}</>;
+  if (loading) {
+    return <Preloader setLoading={setLoading} />;
+  }
+
+  return (
+    <>
+      {!isResumePDF && <Navbar />}
+      {children}
+    </>
+  );
 }

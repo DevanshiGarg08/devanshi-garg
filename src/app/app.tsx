@@ -19,7 +19,7 @@ export default function App() {
               <span className="block font-poppins">& developer.</span>
             </h1>
             <p className="text-sm md:text-md xl:text-lg font-poppins md:text-xl text-gray-600 max-w-lg mt-4">
-              Hi, I'm Devanshi Garg, a multidisciplinary developer & designer
+              hi, I'm Devanshi Garg, a multidisciplinary developer & designer
               based in India.
             </p>
           </div>

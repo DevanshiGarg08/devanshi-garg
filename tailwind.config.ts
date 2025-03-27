@@ -15,6 +15,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         beige: "#e3dcd5",
+        monoBeige: "#CFC3B6",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],

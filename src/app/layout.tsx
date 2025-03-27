@@ -52,7 +52,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${birthstone.variable} ${poppins.variable} ${poppins.className}  antialiased`}
       >
-        <Navbar />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

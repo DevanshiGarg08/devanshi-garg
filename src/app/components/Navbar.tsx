@@ -29,10 +29,10 @@ export default function Navbar() {
         projects
       </Link>
       <Link
-        href="/blogs"
+        href="/resume"
         className="hover:text-gray-600 transition duration-300 font-poppins"
       >
-        blogs
+        resume
       </Link>
     </nav>
   );
