@@ -16,10 +16,6 @@ import { FaPhone } from "react-icons/fa6";
 import { MdVolunteerActivism } from "react-icons/md";
 
 export default function Resume({ isPdfMode = false }: { isPdfMode?: boolean }) {
-  const handlePDFDownload = () => {
-    window.open("/resume.pdf", "_blank");
-  };
-
   function formatBold(text: string) {
     const boldRegex = /\*\*(.*?)\*\*/g;
     return text.replace(boldRegex, '<span class="font-semibold">$1</span>');

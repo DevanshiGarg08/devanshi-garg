@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
 
 export default function ClientLayout({
   children,
