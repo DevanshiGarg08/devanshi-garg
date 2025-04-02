@@ -57,6 +57,18 @@ await page.goto("http://localhost:3000/resume/pdf", {
 });
 
 await page.waitForSelector("#resume-pdf-wrapper");
+await page.addStyleTag({
+  content: `
+    #__vercel, 
+    .vercel-insights-widget, 
+    .floating-widget, 
+    .vercel-speed-insights, 
+    [data-testid="vercel-speed-insights"], 
+    [class*="SpeedInsights"] {
+      display: none !important;
+    }
+  `,
+});
 await new Promise((resolve) => setTimeout(resolve, 500)); // wait for layout/fonts
 
 const element = await page.$("#resume-pdf-wrapper");

@@ -22,3 +22,12 @@ body {
   font-family: var(--font-roboto), sans-serif;
   /* font-family: Arial, Helvetica, sans-serif; */
 }
+
+nextjs-portal,
+#__nextjs_portal,
+[data-nextjs-portal],
+[data-testid="vercel-speed-insights"],
+[class*="SpeedInsights"],
+.vercel-speed-insights {
+  display: none !important;
+}
